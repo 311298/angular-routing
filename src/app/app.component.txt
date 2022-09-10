@@ -1,0 +1,10 @@
+notes while watching the codenation tutorial on routing
+
+=================================================================
+
+it not like we always create a new app using routing option , we can add the routing by doing the few steps
+1st -> go to index.html and add <base href="/">; below the title tag.
+2nd -> create a new file app-routing.module.ts ( copy the basic code from google).
+3rd -> import the AppRoutingModule in app.module.ts and also add it inside the import array.
+4th -> create the 2 new component employee-list and department-list
+
