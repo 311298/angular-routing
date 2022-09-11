@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DepartmentDetailComponent } from './department-list/department-detail/department-detail.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -25,6 +26,7 @@ export const routingComponents = [
   DepartmentListComponent,
   EmployeeListComponent,
   PageNotFoundComponent,
+  DepartmentDetailComponent,
 ];
 // in order to avoid the same imports inside the app.module and app-routing.module we will create a new variable and export it app.module
 // any time we add new component we only need to add it inside the app-routing.module.ts file not in app.module.ts file
