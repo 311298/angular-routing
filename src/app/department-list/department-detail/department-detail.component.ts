@@ -37,8 +37,8 @@ export class DepartmentDetailComponent implements OnInit {
     this.id = +this.route.snapshot.params['id'] + 1;
     this.name = this.route.snapshot.params['name'];
     this.route.params.subscribe((pr: Params) => {
-      this.id = +this.route.snapshot.params['id'];
-      this.name = this.route.snapshot.params['name'];
+      this.id = +pr['id'];
+      this.name = pr['name'];
     });
   }
 
