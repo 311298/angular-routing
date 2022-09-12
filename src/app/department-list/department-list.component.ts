@@ -26,7 +26,8 @@ export class DepartmentListComponent implements OnInit {
   departments: string[] = ['Angular', 'node', 'mongodb', 'ruby', 'bootstrap'];
 
   onSelect(i: number, x: string): void {
-    this.router.navigate(['/department', i, x]);
+    this.router.navigate([i, x], { relativeTo: this.route });
+    // here we are using the relative navigation as we need not to mention '/department'
     this.dr.setName(this.departments);
   }
 }

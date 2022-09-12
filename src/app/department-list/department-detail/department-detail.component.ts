@@ -7,7 +7,7 @@ import { DepartmentService } from './deaprtment.service';
   template: `
     <p>department-detail works!</p>
     <div>
-      <p>Id selected is {{ id }}</p>
+      <p>Id selected is {{ id + 1 }}</p>
       <p>name selected is {{ name }}</p>
     </div>
     <div>
@@ -41,7 +41,8 @@ export class DepartmentDetailComponent implements OnInit {
   name1!: string;
 
   goDepartmentList(): void {
-    this.router.navigate(['/department'], { relativeTo: this.route });
+    this.router.navigate(['../../'], { relativeTo: this.route });
+    //here we need to add the ../../ as we going back to 2 parameters id and name
   }
 
   goNext() {
