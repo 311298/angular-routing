@@ -5,10 +5,16 @@ import { DepartmentService } from './deaprtment.service';
 @Component({
   selector: 'app-department-detail',
   template: `
-    <p>department-detail works!</p>
     <div>
       <p>Id selected is {{ id + 1 }}</p>
       <p>name selected is {{ name }}</p>
+    </div>
+    <p>
+      <button (click)="showOverview()">overview</button>
+      <button (click)="showContact()">contact</button>
+    </p>
+    <div>
+      <router-outlet></router-outlet>
     </div>
     <div>
       <button (click)="goDepartmentList()">previous</button>
@@ -62,5 +68,12 @@ export class DepartmentDetailComponent implements OnInit {
     });
 
     // only thing left is to do the error handling as before 1th there is no row
+  }
+
+  showOverview(): void {
+    this.router.navigate(['overview'], { relativeTo: this.route });
+  }
+  showContact(): void {
+    this.router.navigate(['contact'], { relativeTo: this.route });
   }
 }
