@@ -9,7 +9,11 @@ const routes: Routes = [
   // { path: '', component: DepartmentListComponent },
   { path: '', redirectTo: '/department', pathMatch: 'full' },
   // pathMacth has 2 value 'prefix' -> which add the /department to anything and 'full' path is exactly same
-  { path: 'department', component: DepartmentListComponent },
+  {
+    path: 'department',
+    component: DepartmentListComponent,
+  },
+  { path: 'department/:id/:name', component: DepartmentDetailComponent },
   // what does thing path means if we write link manually and localhost:4200/department -> it will lead to DepartmentListComponent and same goes for EmployeeListComponent
   { path: 'employee', component: EmployeeListComponent },
   // each JS object coresponds to component and its path
